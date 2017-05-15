@@ -35,8 +35,8 @@ brew install zsh zsh-completions
 echo -e "${GREEN}\nSet zsh as default shell...${NC}"
 chsh -s $(which zsh)
 
-echo -e "${GREEN}\nInstalling spaceship zsh's theme...${NC}"
-curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
+# echo -e "${GREEN}\nInstalling spaceship zsh's theme...${NC}"
+# curl -o - https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh | zsh
 
 echo -e "${GREEN}\nInstalling history suggestions(zsh-autosuggestions)...${NC}"
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions | zsh
