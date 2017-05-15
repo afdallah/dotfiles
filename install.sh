@@ -10,6 +10,7 @@ NC='\033[0m' # No Color
 # Bunch of symlinks
 echo -e "${GREEN}\nProcessing symlinks...${NC}"
 echo -e "${GREEN}----------------------${NC}"
+mkdir -p "$DOTFILES_DIR/.config/nvim"
 ln -sfnv "$DOTFILES_DIR/.config/nvim/init.vim" ~/.config/nvim/init.vim
 ln -sfnv "$DOTFILES_DIR/.config/nvim/init.vim" ~/.vimrc
 ln -sfnv "$DOTFILES_DIR/.config/nvim/plugins.vim" ~/.config/nvim/plugins.vim
