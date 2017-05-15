@@ -4,7 +4,7 @@
 
 # Theme
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -33,6 +33,6 @@ SPACESHIP_VI_MODE_SHOW=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 for file in ~/.{exports,aliases}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
