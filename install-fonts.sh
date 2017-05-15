@@ -15,11 +15,11 @@ FONT_NAME="fonts"
 # wget https://raw.githubusercontent.com/andreberg/Meslo-Font/master/dist/v1.2.1/Meslo%20LG%20DZ%20v1.2.1.zip -O ${FONT_NAME}.zip
 
 echo "Where's the fonts link?"
-echo -n "[https://raw.githubusercontent.com/andreberg/Meslo-Font/master/dist/v1.2.1/Meslo%20LG%20DZ%20v1.2.1.zip]"
+echo -n "[https://github.com/halyard/font-meslo-powerline/archive/0.0.2.zip]"
 read FONT_URL
 
 if [ -z "$FONT_URL" ]; then
-    FONT_URL="https://raw.githubusercontent.com/andreberg/Meslo-Font/master/dist/v1.2.1/Meslo%20LG%20DZ%20v1.2.1.zip"
+    FONT_URL="https://github.com/halyard/font-meslo-powerline/archive/0.0.2.zip"
 fi
 
 wget $FONT_URL -O ${FONT_NAME}.zip
