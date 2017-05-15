@@ -7,7 +7,8 @@ NC='\033[0m' # No Color
 
 # Add python support for noevim
 echo -e "${GREEN}Add python support for neovim...${NC}"
-pip2 install neovim
+sudo easy_install pip
+pip2 install --user neovim
 
 # Syntah highlighting for shell
 echo -e "${GREEN}Install syntax highlighter for the shell...${NC}"

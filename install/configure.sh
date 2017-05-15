@@ -26,6 +26,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source ~/.tmux.conf
 
 # Setup Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Set zsh as default shell
 echo -e "${GREEN}\nInstalling zsh${NC}"
