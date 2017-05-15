@@ -1,0 +1,30 @@
+# Pbcopy using xclip
+# alias pbcopy="xclip -sel clip"
+
+# Xampp command from terminal
+alias xampp="sudo /opt/lampp/lampp"
+alias wpfolder="cd /opt/lampp/htdocs/wp/wp-content/themes"
+alias project='/Volumes/Projects/Web'
+alias books='cd ~/Documents/Books'
+alias sandbox='cd ~/Documents/Sandbox'
+
+# Program
+alias readbook='apvlv'
+alias grip='grip -b'
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES'
+alias hiddenfiles='defaults write com.apple.finder AppleShowAllFiles NO'
+
+# Convert *.md file to pdf
+alias notem='pandoc -f markdown_github --latex-engine=xelatex --highlight-style=zenburn'
+alias notesall='for f in *.md; do pandoc "$f" --latex-engine=xelatex -V mainfont="Lato" --highlight-style=kate -S --smart -o "./pdffile/${f%.md}.pdf"; done'
+
+alias tree="tree -I 'node_modules' --dirsfirst"
+
+alias cat='pygmentize -g'
+#alias tmux="env TERM=xterm-256color tmux"
+
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+
+# Enable 256 color using scirpt
+# BASE16_SHELL=$HOME/.config/base16-shell/
+# [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
