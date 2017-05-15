@@ -51,8 +51,6 @@ fi
 
 if [ -z "$EXT" ]; then
     EXT="ttf"
-else
-    EXT="otf"
 fi
 
 if [ -z "$DEST" ]; then
