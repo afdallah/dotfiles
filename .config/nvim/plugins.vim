@@ -42,6 +42,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'wakatime/vim-wakatime'
 Plug 'vim-scripts/simple_playground.vim'
+Plug 'skwp/greplace.vim'
 
 " Plugin 'scrooloose/syntastic'
 " Plugin 'junegunn/vim-easy-align'
