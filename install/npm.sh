@@ -19,3 +19,6 @@ packages=(
 # Install package globally
 echo -e "${GREEN}Install Npm package (bower, gulp, eslint, jshint, grip)${NC}"
 npm install -g "${packages[@]}"
+
+echo -e "${GREEN}\nInstalling refined(pure) zsh's theme...${NC}"
+npm install --global pure-prompt

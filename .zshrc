@@ -4,7 +4,7 @@
 
 # Theme
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="refined"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
