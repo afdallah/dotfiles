@@ -21,8 +21,8 @@ ln -sfnv "$DOTFILES_DIR/.config/nvim/init.vim" ~/.vimrc
 ln -sfnv "$DOTFILES_DIR/.config/nvim/plugins.vim" ~/.config/nvim/plugins.vim
 ln -sfnv "$DOTFILES_DIR/.config/nvim/plugins.vim" ~/.vim/plugins.vim
 
-mkdir -p "~/.config/nvim/colors"
-ln -sfnv ~/.config/nvim/colors ~/.vim/colors
+mkdir -p "$HOME/.config/nvim/colors"
+ln -sfnv "$HOME/.config/nvim/colors" ~/.vim/colors
 ln -sfnv "$DOTFILES_DIR/.config/nvim/UltiSnips" ~/.config/nvim/UltiSnips
 ln -sfnv "$DOTFILES_DIR/.config/nvim/UltiSnips" ~/.vim/UltiSnips
 ln -sfnv "$DOTFILES_DIR/.aliases" ~
