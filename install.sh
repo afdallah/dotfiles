@@ -7,6 +7,10 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
+# Enable 256color italic support for terminal
+echo -e "${GREEN}Enable xterm-256color-italic for the shell...${NC}"
+tic "$DOTFILES_DIR/iterm/xterm-256color-italic.terminfo"
+
 # Bunch of symlinks
 echo -e "${GREEN}\nProcessing symlinks...${NC}"
 echo -e "${GREEN}----------------------${NC}"
