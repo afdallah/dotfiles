@@ -377,7 +377,7 @@ let g:NERDTreeDirArrowExpandable="▸"
 let g:NERDTreeDirArrowCollapsible="▾"
 
 ">> Vinegar <<"
-let g:netrw_list_hide= '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$,node_modules'
+" let g:netrw_list_hide= '.*\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\.\.\=/\=$,node_modules'
 
 ">> Tabular <<"
 if exists(":Tabularize")

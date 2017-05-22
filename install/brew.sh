@@ -107,11 +107,12 @@ else
 fi
 
 # Others
-echo -en "${GREEN}Install Misc Apps (spectacle, Zeplin)(Y/n)? => ${NC}"; read answer
+echo -en "${GREEN}Install Misc Apps (spectacle, Zeplin, Skyfonts)(Y/n)? => ${NC}"; read answer
 if [[ $answer != "n" ]] && [[ $answer != "N" ]] ; then
     echo -e "Installing packages...\n"
     brew cask install spectacle
     brew cask install zeplin
+    brew cask install skyfonts
 else
     echo -e "\nSkipping Misc Apps.\n"
 fi
