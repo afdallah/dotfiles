@@ -181,6 +181,9 @@ set autoread
 
 set nocompatible
 
+" dont make any backup and temporary files
+set nobackup
+set noswapfile
 "------------- Mapping -------------"
 let mapleader = ','                             " Set leader map to comma
 
