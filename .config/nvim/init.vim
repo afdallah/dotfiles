@@ -184,6 +184,8 @@ set nocompatible
 " dont make any backup and temporary files
 set nobackup
 set noswapfile
+
+filetype plugin indent on
 "------------- Mapping -------------"
 let mapleader = ','                             " Set leader map to comma
 
