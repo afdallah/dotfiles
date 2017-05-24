@@ -28,11 +28,11 @@ source $HOME/.exports
 # Enable vi editing mode in terminal
 set -o vi
 
-SPACESHIP_PROMPT_SYMBOL=⬢
-SPACESHIP_VI_MODE_SHOW=false
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-
 for file in ~/.{exports,aliases}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+autoload -U promptinit; promptinit
+prompt pure
