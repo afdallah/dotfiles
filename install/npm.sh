@@ -14,6 +14,7 @@ packages=(
     csslint
     jshint
     jsonlint
+    js-beautify
 )
 
 # Install package globally
