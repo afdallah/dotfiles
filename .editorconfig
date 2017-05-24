@@ -21,6 +21,9 @@ indent_size = 2
 indent_style = space
 indent_size = 2
 
+# Keep this line to prevent js beautifier create new line before html, head, body tags
+extra_liners = []
+
 [**.php]
 indent_style = space
 indent_size = 4
