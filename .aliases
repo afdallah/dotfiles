@@ -9,6 +9,7 @@ alias books='cd ~/Documents/Books'
 alias sandbox='cd ~/Documents/Sandbox'
 
 # Program
+alias e='mvim -v'
 alias readbook='apvlv'
 alias grip='grip -b'
 alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES'
