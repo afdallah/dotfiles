@@ -26,6 +26,7 @@ ln -sfnv "$HOME/.config/nvim/colors" ~/.vim/colors
 ln -sfnv "$DOTFILES_DIR/.config/nvim/UltiSnips" ~/.config/nvim/UltiSnips
 ln -sfnv "$DOTFILES_DIR/.config/nvim/UltiSnips" ~/.vim/UltiSnips
 ln -sfnv "$DOTFILES_DIR/.aliases" ~
+ln -sfnv "$DOTFILES_DIR/.editorconfig" ~
 ln -sfnv "$DOTFILES_DIR/.exports" ~
 ln -sfnv "$DOTFILES_DIR/.gitconfig" ~
 ln -sfnv "$DOTFILES_DIR/.gitignore_global" ~
