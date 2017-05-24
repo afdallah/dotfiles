@@ -228,7 +228,7 @@ autocmd FileType java set omnifunc=javacomplete#Complete
 " Dynamic indentation depend on file type
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
-autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype css,scss setlocal ts=2 sw=2 expandtab
 
 " Ctags help to autocomplete class name (CSS, SCSS)
 "autocmd FileType css,scss set iskeyword=@,48-57,_,-,?,!,192-25
