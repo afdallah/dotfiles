@@ -186,6 +186,9 @@ set nobackup
 set noswapfile
 
 filetype plugin indent on
+
+" Make rendering faster
+set ttyfast
 "------------- Mapping -------------"
 let mapleader = ','                             " Set leader map to comma
 
