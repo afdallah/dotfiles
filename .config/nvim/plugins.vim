@@ -43,6 +43,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'wakatime/vim-wakatime'
 Plug 'vim-scripts/simple_playground.vim'
 Plug 'skwp/greplace.vim'
+Plug 'maksimr/vim-jsbeautify'
 
 " Plugin 'scrooloose/syntastic'
 " Plugin 'junegunn/vim-easy-align'
