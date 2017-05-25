@@ -83,7 +83,7 @@ if (has("nvim"))
     call ActivateVimeOne()                      " Must below set background
 else
     " Set theme depend on the time of the day
-    if strftime("%H") <= 15
+    if strftime("%H") >= 19
         colorscheme monokai
 
         let g:monokai_term_italic = 1
