@@ -75,11 +75,11 @@ syntax on                                       " Enable syntax highlighter
 
 " Theme
 if (has("nvim"))
+    set background=dark                         " For the dark version
     colorscheme one
     let g:airline_theme='one'
     let g:one_allow_italics = 1                 " Enable italic
 
-    set background=dark                         " For the dark version
     call ActivateVimeOne()                      " Must below set background
 else
     " Set theme depend on the time of the day
@@ -89,12 +89,12 @@ else
         let g:monokai_term_italic = 1
         let g:airline_theme='base16_ocean'
     else
+        set background=dark                     " For the dark version
         colorscheme one
 
         let g:airline_theme='one'
         let g:one_allow_italics = 1             " Enable italic
 
-        set background=dark                     " For the dark version
 
         call ActivateVimeOne()                  " Must below set background
     endif
