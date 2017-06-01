@@ -47,41 +47,12 @@ hi link netrwList Constant
 " Wrap line if > 80 char in markdown only
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
-">> Vim one <<"
-function! ActivateVimeOne()
-    call one#highlight('Identifier', '', '', 'italic')
-    call one#highlight('Keyword', '', '', 'bold')
-
-    call one#highlight('htmlArg', '', '', 'italic')
-
-    call one#highlight('SpecialComment', '', '', 'italic')
-    call one#highlight('Comment', '5c6370', '', 'italic')
-
-    call one#highlight('javascriptVariable', '', '', 'italic')
-    call one#highlight('jsThis', '', '', 'italic')
-    call one#highlight('javascriptClassKeyword', '', '', 'italic')
-    call one#highlight('javascriptFuncArg', '', '', 'italic')
-    call one#highlight('javascriptFuncKeyword', '', '', 'italic')
-    call one#highlight('jsFuncCall', '', '', 'italic')
-
-    call one#highlight('sassMixin', '', '', 'italic')
-
-    call one#highlight('markdownItalic', '', '', 'italic')
-endfunction
-
 " This 2 line should alway placed above colorscheme definition to achieve the
 " right color
 syntax on                                       " Enable syntax highlighter
 
 " Theme
-if (has("nvim"))
-    set background=dark                         " For the dark version
-    colorscheme one
-    let g:airline_theme='one'
-    let g:one_allow_italics = 1                 " Enable italic
-
-    call ActivateVimeOne()                      " Must below set background
-else
+if (has("gui_running"))
     " Set theme depend on the time of the day
     if strftime("%H") >= 19
         colorscheme monokai
@@ -94,10 +65,13 @@ else
 
         let g:airline_theme='one'
         let g:one_allow_italics = 1             " Enable italic
-
-
-        call ActivateVimeOne()                  " Must below set background
     endif
+
+else
+    set background=dark                         " For the dark version
+    colorscheme one
+    let g:airline_theme='one'
+    let g:one_allow_italics = 1                 " Enable italic
 
     " Accroding to this post http://sunaku.github.io/vim-256color-bce.html
     if &term =~ '256color'
@@ -237,6 +211,30 @@ autocmd Filetype css,scss setlocal ts=2 sw=2 expandtab
 so ~/.config/nvim/plugins.vim                           " source Plugin
 
 "------------- Plugin Settings -------------"
+
+">> Vim one <<"
+if g:colors_name == 'one'
+    call one#highlight('vimLineComment', '', '', 'italic')
+    call one#highlight('Identifier', '', '', 'italic')
+    call one#highlight('Keyword', '', '', 'bold')
+
+    call one#highlight('htmlArg', '', '', 'italic')
+
+    call one#highlight('SpecialComment', '', '', 'italic')
+    call one#highlight('Comment', '5c6370', '', 'italic')
+
+    call one#highlight('javascriptVariable', '', '', 'italic')
+    call one#highlight('jsThis', '', '', 'italic')
+    call one#highlight('javascriptClassKeyword', '', '', 'italic')
+    call one#highlight('javascriptFuncArg', '', '', 'italic')
+    call one#highlight('javascriptFuncKeyword', '', '', 'italic')
+    call one#highlight('jsFuncCall', '', '', 'italic')
+
+    call one#highlight('sassMixin', '', '', 'italic')
+
+    call one#highlight('markdownItalic', '', '', 'italic')
+endif
+
 ">> Ctrl-p <<"
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'                            " Show result on top
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " Ignore everything iside gitignore file
@@ -410,9 +408,8 @@ function! s:align()
 endfunction
 
 ">> js beatify <<"
-".vimrc
 map <c-f> :call JsBeautify()<cr>
-" or
+
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for json
 autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
