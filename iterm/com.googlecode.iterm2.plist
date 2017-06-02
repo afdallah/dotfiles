@@ -332,11 +332,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>601 189 445 77 0 0 1366 745 </string>
+	<string>421 146 1366 412 0 0 1366 745 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>258 228 796 473 0 0 1366 745 </string>
+	<string>448 128 918 495 0 0 1366 745 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 55 1010 690 0 0 1366 745 </string>
+	<string>165 262 1010 483 0 0 1366 745 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 0 1010 745 0 0 1366 745 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1252,17 +1252,19 @@
 			<key>Columns</key>
 			<integer>125</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/bin/zsh</string>
 			<key>Cursor Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.80784313725490198</real>
+				<real>0.92156862745098034</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.77254901960784317</real>
+				<real>0.70196078431372544</real>
 				<key>Red Component</key>
-				<real>0.75294117647058822</real>
+				<real>0.0</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -1317,6 +1319,8 @@
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Text</key>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1627,7 +1631,7 @@
 			<key>Non Ascii Font</key>
 			<string>SourceCodePro-Bold 12</string>
 			<key>Non-ASCII Anti Aliased</key>
-			<false/>
+			<true/>
 			<key>Normal Font</key>
 			<string>MesloLGLDZForPowerline-Regular 13</string>
 			<key>Option Key Sends</key>
@@ -1704,12 +1708,16 @@
 			<string>/Users/afdallah</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>D94BC230-9193-49C8-888B-B39E16A05A71</string>
 	<key>NoSyncLastTipTime</key>
-	<real>516539264.78982002</real>
+	<real>517293326.53431898</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1729,6 +1737,12 @@
 		<string>0005</string>
 		<string>0006</string>
 		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
+		<string>0011</string>
+		<string>0012</string>
+		<string>0013</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -1774,13 +1788,19 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-15T03:48:28Z</date>
+	<date>2017-05-24T15:10:07Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SmartPlacement</key>
 	<true/>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Profiles</string>
+	</array>
 	<key>UseBorder</key>
 	<false/>
+	<key>UseLionStyleFullscreen</key>
+	<true/>
 	<key>Window Arrangements</key>
 	<dict>
 		<key>Arrangement 2</key>
