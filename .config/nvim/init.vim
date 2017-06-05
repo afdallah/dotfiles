@@ -45,6 +45,7 @@ hi link netrwList Constant
 
 " set colorcolumn=80                              " Set line 80 char
 " Wrap line if > 80 char in markdown only
+" To rewrap/reformat use command `gq` after selecting the area needed
 au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " This 2 line should alway placed above colorscheme definition to achieve the
@@ -419,3 +420,13 @@ autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+">> Markdown preview <<"
+" Use github flavored markdown style
+let vim_markdown_preview_github=1
+let vim_markdown_preview_temp_file=1
+let vim_markdown_preview_toggle=1
+let vim_markdown_preview_browser='Google Chrome'
+
+let vim_markdown_preview_hotkey='<C-m>'
+
