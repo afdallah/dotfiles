@@ -20,6 +20,7 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'othree/html5.vim'
+Plug 'skwp/vim-html-escape'
 Plug 'digitaltoad/vim-pug'
 Plug 'marijnh/tern_for_vim', { 'do' : 'npm install' }
 Plug 'mattn/emmet-vim'
@@ -44,6 +45,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'vim-scripts/simple_playground.vim'
 Plug 'skwp/greplace.vim'
 Plug 'maksimr/vim-jsbeautify'
+Plug 'JamshedVesuna/vim-markdown-preview', { 'do' : 'pip install grip' }
 
 " Plugin 'scrooloose/syntastic'
 " Plugin 'junegunn/vim-easy-align'
