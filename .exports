@@ -18,3 +18,5 @@ fi
 # Set dotfiles dir
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
