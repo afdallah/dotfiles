@@ -186,6 +186,34 @@ map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
 
+" fzf
+" nnoremap <silent> <C-P> :Files<CR>
+nnoremap <silent> <C-P> :call fzf#run(fzf#wrap({
+    \'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
+nnoremap <silent> <leader>a :Buffers<CR>
+nnoremap <silent> <leader>A :Windows<CR>
+nnoremap <silent> <leader>; :BLines<CR>
+nnoremap <silent> <leader>o :BTags<CR>
+nnoremap <silent> <leader>O :Tags<CR>
+nnoremap <silent> <leader>? :History<CR>
+nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
+nnoremap <silent> <leader>. :AgIn
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
 "---------- Auto Commands -----------"
 " Automatically source .vimrc file on save
 augroup autosourcing
@@ -242,9 +270,9 @@ if g:colors_name == 'one'
 endif
 
 ">> Ctrl-p <<"
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'                            " Show result on top
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " Ignore everything iside gitignore file
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|target|dist)|(\.(swp|ico|git|svn))$'
+" let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'                            " Show result on top
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard'] " Ignore everything iside gitignore file
+" let g:ctrlp_custom_ignore = '\v[\/](node_modules|bower_components|target|dist)|(\.(swp|ico|git|svn))$'
 
 ">> Make YouCompleteMe compatible with Ultisnips <<"
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']

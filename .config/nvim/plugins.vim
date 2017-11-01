@@ -8,7 +8,11 @@ endfunction
 
 call plug#begin('~/.config/nvim/bundle')
 
-Plug 'kien/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-obsession'
