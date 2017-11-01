@@ -46,6 +46,7 @@ Plug 'vim-scripts/simple_playground.vim'
 Plug 'skwp/greplace.vim'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'JamshedVesuna/vim-markdown-preview', { 'do' : 'pip install grip' }
+Plug 'mxw/vim-jsx'
 
 " Plugin 'scrooloose/syntastic'
 " Plugin 'junegunn/vim-easy-align'

@@ -181,6 +181,11 @@ nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
 nmap <C-L> <C-W><C-L>
 
+" Managing buffer
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
 "---------- Auto Commands -----------"
 " Automatically source .vimrc file on save
 augroup autosourcing
@@ -378,7 +383,7 @@ let NERDTreeHijackNetrw = 0
 let g:NERDTreeIgnore=['\.swp$', '\~$', 'node_modules$', '\.map$', 'maps$']
 let g:NERDTreeWinPos = "right"
 
-nnoremap <c-n> :NERDTreeToggle<cr>
+nnoremap <silent> <c-n> :NERDTreeToggle<cr>
 
 let g:NERDTreeDirArrowExpandable="▸"
 let g:NERDTreeDirArrowCollapsible="▾"
@@ -430,3 +435,5 @@ let vim_markdown_preview_browser='Google Chrome'
 
 let vim_markdown_preview_hotkey='<C-m>'
 
+" Enable vim jsx
+let g:jsx_ext_required = 0
