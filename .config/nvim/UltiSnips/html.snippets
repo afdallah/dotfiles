@@ -15,3 +15,21 @@ snippet build:css "Gulp build comment tag" b
 <!-- build:${1:css} assets/css/${2:main.min.css} -->
 <!-- endbuild -->
 endsnippet
+
+snippet snmodule "Membuat module wrapper dan judulnya"
+<div id="${1:nama module}" class="module">
+	<h2 class="module__title"><a class="self-anchor" href="#$1">$1</a></h2>
+</div>
+endsnippet
+
+snippet snsubtitle "Module subtitle" b
+<h3 class="module__subtitle">${1:Module Subtitle}</h3>
+endsnippet
+
+snippet sncode "Module Code" b
+<div class="module__code">
+  <pre><code class="html">
+    ${1:Encoded code here}
+  </code></pre>
+</div>
+endsnippet
