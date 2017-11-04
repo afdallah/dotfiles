@@ -187,9 +187,11 @@ map gp :bp<cr>
 map gd :bd<cr>
 
 " fzf
-" nnoremap <silent> <C-P> :Files<CR>
-nnoremap <silent> <C-P> :call fzf#run(fzf#wrap({
-    \'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
+nnoremap <silent> <C-P> :Files<CR>
+
+" Using default search engine, ignore hidden file and gitignore
+" nnoremap <silent> <C-P> :call fzf#run(fzf#wrap({
+    " \'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
 nnoremap <silent> <leader>a :Buffers<CR>
 nnoremap <silent> <leader>A :Windows<CR>
 nnoremap <silent> <leader>; :BLines<CR>
@@ -391,6 +393,12 @@ let g:NERDTrimTrailingWhitespace = 1
 set updatetime=250
 nmap <Leader>g :GitGutterSignsToggle<cr>
 
+" GitGutter styling to use · instead of +/-
+let g:gitgutter_sign_added = '∙'
+let g:gitgutter_sign_modified = '∙'
+let g:gitgutter_sign_removed = '∙'
+let g:gitgutter_sign_modified_removed = '∙'
+
 ">> NERDTree <<"
 " Nerdtree window resize
 let g:NERDTreeWinSize = 30
@@ -465,3 +473,6 @@ let vim_markdown_preview_hotkey='<C-m>'
 
 " Enable vim jsx
 let g:jsx_ext_required = 0
+
+set synmaxcol=128
+syntax sync minlines=256
