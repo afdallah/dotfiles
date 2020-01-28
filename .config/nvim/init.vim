@@ -1,34 +1,34 @@
 "------------- Graphical tweak -------------"
 " Use 24-bit (true-color) mode in Vim/Neovim
-if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
+" if (has("nvim"))
+    " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" endif
 
 if (has("termguicolors"))
     set termguicolors
 endif
 
-if filereadable(expand("~/.vimrc_background"))
-    let base16colorspace=256
-    source ~/.vimrc_background
-endif
+" if filereadable(expand("~/.vimrc_background"))
+    " let base16colorspace=256
+    " source ~/.vimrc_background
+" endif
 
-set t_CO=256                                    " Set terminal color to 256 mode
+" set t_CO=256                                    " Set terminal color to 256 mode
 
 " Option for Macvim and gvim only
-if has("gui_running")
-    " Better font reduce stress, https://github.com/andreberg/Meslo-Font
-    " Meslo has a good default line-height/vertical spacing
-    set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline:h13
-    " Set line height
-    set linespace=6
-    " Remove all gui decoration: scroolbar right and leftt, top menu, tab.
-    set guioptions=
-    set relativenumber
-    " Set default window size
-    set lines=50 columns=120
-    :winpos 50 50 " Center window
-endif
+" if has("gui_running")
+    " " Better font reduce stress, https://github.com/andreberg/Meslo-Font
+    " " Meslo has a good default line-height/vertical spacing
+    " set guifont=Meslo\ LG\ L\ DZ\ for\ Powerline:h13
+    " " Set line height
+    " set linespace=6
+    " " Remove all gui decoration: scroolbar right and leftt, top menu, tab.
+    " set guioptions=
+    " set relativenumber
+    " " Set default window size
+    " set lines=50 columns=120
+    " :winpos 50 50 " Center window
+" endif
 
 hi CursorLineNR cterm=bold
 augroup CLNRSet
@@ -46,42 +46,43 @@ hi link netrwList Constant
 " set colorcolumn=80                              " Set line 80 char
 " Wrap line if > 80 char in markdown only
 " To rewrap/reformat use command `gq` after selecting the area needed
-au BufRead,BufNewFile *.md setlocal textwidth=80
+" au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " This 2 line should alway placed above colorscheme definition to achieve the
 " right color
 syntax on                                       " Enable syntax highlighter
 
 " Theme
-if (has("gui_running"))
-    " Set theme depend on the time of the day
-    if strftime("%H") >= 19
-        colorscheme monokai
+" if (has("gui_running"))
+    " " Set theme depend on the time of the day
+    " if strftime("%H") >= 19
+        " colorscheme monokai
 
-        let g:monokai_term_italic = 1
-        let g:airline_theme='base16_ocean'
-    else
-        set background=dark                     " For the dark version
-        colorscheme one
+        " let g:monokai_term_italic = 1
+        " let g:airline_theme='base16_ocean'
+    " else
+        " set background=dark                     " For the dark version
+        " colorscheme one
 
-        let g:airline_theme='one'
-        let g:one_allow_italics = 1             " Enable italic
-    endif
+        " let g:airline_theme='one'
+        " let g:one_allow_italics = 1             " Enable italic
+    " endif
 
-else
-    set background=dark                         " For the dark version
-    colorscheme one
-    let g:airline_theme='one'
-    let g:one_allow_italics = 1                 " Enable italic
+" else
+    " set background=dark                         " For the dark version
+    " " colorscheme one
+    " colorscheme palenight
+    " let g:airline_theme='one'
+    " let g:one_allow_italics = 1                 " Enable italic
 
-    " Accroding to this post http://sunaku.github.io/vim-256color-bce.html
-    if &term =~ '256color'
-        " Disable Background Color Erase (BCE) so that color schemes
-        " work properly when Vim is used inside tmux and GNU screen.
-        " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-        set t_ut=
-    endif
-endif
+    " " Accroding to this post http://sunaku.github.io/vim-256color-bce.html
+    " if &term =~ '256color'
+        " " Disable Background Color Erase (BCE) so that color schemes
+        " " work properly when Vim is used inside tmux and GNU screen.
+        " " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+        " set t_ut=
+    " endif
+" endif
 
 " Italic Support *Must use actual escape symbol by pressing <C-v><Escape>
 " to achieve italic style, make sure higlight Comment cterm=italic alway
@@ -93,7 +94,7 @@ highlight Comment cterm=italic
 
 set fillchars+=vert:│                           " Make split border nicer
 
-hi VertSplit ctermbg=NONE guibg=NONE
+" hi VertSplit ctermbg=NONE guibg=NONE
 
 set laststatus=2
 set complete=.,w,u,b                            " Set autocomplete
@@ -114,9 +115,9 @@ set number                                      " Show number
 set clipboard=unnamed                       " Set clipboard to able to copy from and to system clipboard
 
 "------------- Indentation -------------"
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set backspace=indent,eol,start                  " Make Backspace behave like another text editor
 set autoindent
@@ -126,7 +127,7 @@ set breakindent
 set copyindent
 set shiftround
 set list                                        " Display whitespace char
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,trail:.,eol:¬
 
 "------------- Split Option -------------"
 set splitright                                  " New vsplit in the right of current
@@ -164,13 +165,17 @@ filetype plugin indent on
 
 " Make rendering faster
 set ttyfast
+
+set title
+
+" set autochdir
 "------------- Mapping -------------"
 let mapleader = ','                             " Set leader map to comma
 
 " Shortcut for editing .vimrc
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ev :e $MYVIMRC<cr>
 nmap <Leader>es :so $MYVIMRC<cr>
-nmap <Leader>ep :tabedit ~/.config/nvim/plugins.vim<cr>
+nmap <Leader>ep :e ~/.config/nvim/plugins.vim<cr>
 
 " Remove search higlight when hit escape
 nnoremap <silent> <esc><esc> :noh<cr>
@@ -249,27 +254,27 @@ so ~/.config/nvim/plugins.vim                           " source Plugin
 "------------- Plugin Settings -------------"
 
 ">> Vim one <<"
-if g:colors_name == 'one'
-    call one#highlight('vimLineComment', '', '', 'italic')
-    call one#highlight('Identifier', '', '', 'italic')
-    call one#highlight('Keyword', '', '', 'bold')
+" if g:colors_name == 'one'
+    " call one#highlight('vimLineComment', '', '', 'italic')
+    " call one#highlight('Identifier', '', '', 'italic')
+    " call one#highlight('Keyword', '', '', 'bold')
 
-    call one#highlight('htmlArg', '', '', 'italic')
+    " call one#highlight('htmlArg', '', '', 'italic')
 
-    call one#highlight('SpecialComment', '', '', 'italic')
-    call one#highlight('Comment', '5c6370', '', 'italic')
+    " call one#highlight('SpecialComment', '', '', 'italic')
+    " call one#highlight('Comment', '5c6370', '', 'italic')
 
-    call one#highlight('javascriptVariable', '', '', 'italic')
-    call one#highlight('jsThis', '', '', 'italic')
-    call one#highlight('javascriptClassKeyword', '', '', 'italic')
-    call one#highlight('javascriptFuncArg', '', '', 'italic')
-    call one#highlight('javascriptFuncKeyword', '', '', 'italic')
-    call one#highlight('jsFuncCall', '', '', 'italic')
+    " call one#highlight('javascriptVariable', '', '', 'italic')
+    " call one#highlight('jsThis', '', '', 'italic')
+    " call one#highlight('javascriptClassKeyword', '', '', 'italic')
+    " call one#highlight('javascriptFuncArg', '', '', 'italic')
+    " call one#highlight('javascriptFuncKeyword', '', '', 'italic')
+    " call one#highlight('jsFuncCall', '', '', 'italic')
 
-    call one#highlight('sassMixin', '', '', 'italic')
+    " call one#highlight('sassMixin', '', '', 'italic')
 
-    call one#highlight('markdownItalic', '', '', 'italic')
-endif
+    " call one#highlight('markdownItalic', '', '', 'italic')
+" endif
 
 ">> Ctrl-p <<"
 " let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'                            " Show result on top
@@ -292,6 +297,16 @@ let g:UltiSnipsSnippetsDir="~/.config/nvim/UltiSnips"
 " Autoclose scratch window
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" Emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,javascript.jsx EmmetInstall
+" --> Extending emmet for jsx file
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
 
 " YouCompleteMe Enable Omnifunc
 let g:ycm_semantic_triggers =  {
@@ -474,5 +489,22 @@ let vim_markdown_preview_hotkey='<C-m>'
 " Enable vim jsx
 let g:jsx_ext_required = 0
 
-set synmaxcol=128
+set synmaxcol=300
 syntax sync minlines=256
+
+colorscheme palenight
+let g:airline_theme='base16'
+let g:palenight_terminal_italics=1
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 4
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 20
+
+" augroup ProjectDrawer
+  " autocmd!
+  " autocmd VimEnter * :Explore
+" augroup END
+
+nmap <silent> <Leader><Leader> :Rexplore <CR>

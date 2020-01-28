@@ -1,0 +1,13 @@
+# Tutorial restore iterm settings
+
+1. Pastikan iterm2 sudah terinstall di macOS
+2. Selanjutnya buka preferences
+	* Buka iterm 
+	* tekan `command + ,` 
+	* masuk tab **General** 
+	* Centang **Load preferences from custom folder or url**
+	* Arahkan ke folder file kita tersimpan misal `~/.dotfiles/iterm`
+	* **Jangan pencet Save Current Settings to folder**
+	* Exit Iterm
+	* Apabila terminal sebelumnya setting untuk 256color dan italic jangan lupa jalankan perintah `tic resources/xterm-256color-italic.terminfo` dan `tic resources/tmux-256color-italic.terminfo` sesuai dengan settingan kita
+	* Buka Iterm untuk melihat hasilnya

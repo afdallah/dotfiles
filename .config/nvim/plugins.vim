@@ -13,23 +13,24 @@ call plug#begin('~/.config/nvim/bundle')
 " Plug 'junegunn/fzf.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-vinegar'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-obsession'
+" Plug 'tpope/vim-vinegar'
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'tpope/vim-obsession'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tpope/vim-surround'
 Plug 'othree/yajs.vim'
+Plug 'pangloss/vim-javascript'                  " Javascript
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'othree/html5.vim'
+" Plug 'hail2u/vim-css3-syntax'
+" Plug 'cakebaker/scss-syntax.vim'
+" Plug 'othree/html5.vim'
 Plug 'skwp/vim-html-escape'
 Plug 'digitaltoad/vim-pug'
 Plug 'marijnh/tern_for_vim', { 'do' : 'npm install' }
 Plug 'mattn/emmet-vim'
 Plug 'alvan/vim-closetag'
-Plug 'godlygeek/tabular'
+" Plug 'godlygeek/tabular'
 Plug 'gregsexton/MatchTag'
 Plug 'andersoncustodio/vim-enter-indent'
 Plug 'jiangmiao/auto-pairs'
@@ -43,13 +44,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'chriskempson/base16-vim', { 'do' : 'cp colors/* ~/.config/nvim/colors/' }
 Plug 'rakr/vim-one', { 'do' : 'cp colors/* ~/.config/nvim/colors/' }
 Plug 'crusoexia/vim-monokai', { 'do' : 'cp colors/* ~/.config/nvim/colors/' }
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'wakatime/vim-wakatime'
-Plug 'vim-scripts/simple_playground.vim'
-Plug 'skwp/greplace.vim'
-Plug 'maksimr/vim-jsbeautify'
-Plug 'JamshedVesuna/vim-markdown-preview', { 'do' : 'pip install grip' }
+Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'tpope/vim-fugitive'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'wakatime/vim-wakatime'
+" Plug 'vim-scripts/simple_playground.vim'
+" Plug 'skwp/greplace.vim'
+" Plug 'JamshedVesuna/vim-markdown-preview', { 'do' : 'pip install grip' }
 Plug 'mxw/vim-jsx'
 
 " Plugin 'scrooloose/syntastic'
